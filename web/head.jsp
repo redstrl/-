@@ -25,7 +25,7 @@
           <c:otherwise>
             欢迎您，${sessionScope.user.username}!
             | <img src="${pageContext.request.contextPath}/images/cart.gif" width="26" height="23" style="margin-bottom:-4px" alt=""/>&nbsp;
-            <a href="#">购物车</a>
+            <a href="${pageContext.request.contextPath}/cart.jsp">购物车</a>
             | <a href="${pageContext.request.contextPath}/myAccount.jsp">我的账户</a>
           </c:otherwise>
         </c:choose>

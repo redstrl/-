@@ -20,6 +20,22 @@
         <filter-name>autoLoginFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+    <filter>
+        <filter-name>LoginMessageFilter</filter-name>
+        <filter-class>cn.esweb.eswebstore.web.filter.LoginMessageFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginMessageFilter</filter-name>
+        <url-pattern>/login</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>LogoutMessageFilter</filter-name>
+        <filter-class>cn.esweb.eswebstore.web.filter.LogoutMessageFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LogoutMessageFilter</filter-name>
+        <url-pattern>/logout</url-pattern>
+    </filter-mapping>
     <!---->
 
     <servlet>
@@ -69,6 +85,30 @@
     <servlet-mapping>
         <servlet-name>FindProductByIdServlet</servlet-name>
         <url-pattern>/findProductById</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ChangeCartServlet</servlet-name>
+        <servlet-class>cn.esweb.eswebstore.web.servlet.client.ChangeCartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangeCartServlet</servlet-name>
+        <url-pattern>/changeCart</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddCartServlet</servlet-name>
+        <servlet-class>cn.esweb.eswebstore.web.servlet.client.AddCartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddCartServlet</servlet-name>
+        <url-pattern>/addCart</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CreateOrderServlet</servlet-name>
+        <servlet-class>cn.esweb.eswebstore.web.servlet.client.CreateOrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateOrderServlet</servlet-name>
+        <url-pattern>/creatOrder</url-pattern>
     </servlet-mapping>
 
     <welcome-file-list>
