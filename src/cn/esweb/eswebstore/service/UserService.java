@@ -17,7 +17,7 @@ public class UserService {
 			dao.addUser(user);
 			// 发送激活邮件
 			String emailMsg = "感谢您注册，点击"
-					+ "<a href='http://localhost:8080/web/activeUser?activeCode="
+					+ "<a href='http://43.139.94.209:8080/activeUser?activeCode="
 					+ user.getActiveCode() + "'>&nbsp;激活&nbsp;</a>后使用。"
 							+ "<br />为保障您的账户安全，请在24小时内完成激活操作";
 			System.out.println(emailMsg);
